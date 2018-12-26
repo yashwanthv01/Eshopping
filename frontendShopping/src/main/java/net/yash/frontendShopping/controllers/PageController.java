@@ -12,23 +12,32 @@ public class PageController {
 	@RequestMapping(value = {"/","/home","/index"})
 	public ModelAndView index(){
 		ModelAndView mvObject = new ModelAndView("page");
-		mvObject.addObject("greeting", "Welcome to Eshopping website !!");
+		mvObject.addObject("title", "home");
+		mvObject.addObject("userClickHome", true);
 		return mvObject;
 	}
 	
-	@RequestMapping(value="/test")
-	public ModelAndView testRequestParam(@RequestParam("greeting") String greeting,
-										@RequestParam("secondGreeting")String secondGreeting){
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting", greeting);
-		mv.addObject("secondGreeting", secondGreeting);
-		return mv;
+	@RequestMapping(value = {"/product"})
+	public ModelAndView productMethod(){
+		ModelAndView mvObject = new ModelAndView("page");
+		mvObject.addObject("title", "product");
+		mvObject.addObject("userClickProduct", true);
+		return mvObject;
 	}
-
-	@RequestMapping(value="/test/{greeting}")
-	public ModelAndView testPathParam(@PathVariable("greeting")String greeting){
-		ModelAndView mvObject = new ModelAndView("pathGreeting");
-		mvObject.addObject("greeting", greeting);
-		return mvObject;	
+	
+	@RequestMapping(value = {"/about"})
+	public ModelAndView aboutMethod(){
+		ModelAndView mvObject = new ModelAndView("page");
+		mvObject.addObject("title", "about");
+		mvObject.addObject("userClickAbout", true);
+		return mvObject;
 	}
+	@RequestMapping(value = {"/contact"})
+	public ModelAndView contactMethod(){
+		ModelAndView mvObject = new ModelAndView("page");
+		mvObject.addObject("title", "contact");
+		mvObject.addObject("userClickContact", true);
+		return mvObject;
+	}
+	
 }

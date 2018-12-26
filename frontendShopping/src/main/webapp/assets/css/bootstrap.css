@@ -42,6 +42,7 @@
 }
 
 html {
+	height:100%;
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -67,6 +68,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  height:100%;
 }
 
 [tabindex="-1"]:focus {
@@ -9028,3 +9030,19 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+.wrapper{
+	min-height:100%;
+	position: relative;
+}
+
+.content{
+	padding-bottom:60px; /* height of the footer */
+}
+
+.footer{
+	position:absolute;
+	bottom:15px;
+	height:60px;
+}
