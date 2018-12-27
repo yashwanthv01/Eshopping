@@ -15,6 +15,14 @@
 
 	<dependencies>
 
+		<!-- LINKING BACKEND dependency -->
+
+		<dependency>
+			<groupId>net.yash</groupId>
+			<artifactId>backendShopping</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 		<!-- SPRING dependency -->
 
 		<dependency>

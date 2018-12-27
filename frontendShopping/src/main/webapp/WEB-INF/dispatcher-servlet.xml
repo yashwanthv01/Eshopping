@@ -10,7 +10,10 @@
    http://www.springframework.org/schema/mvc
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+<!-- component scan for all the components that is controllers  -->
 <context:component-scan base-package="net.yash.frontendShopping.controllers"/>
+<!-- component scan for all the components that is backEnd Data base package  -->
+<context:component-scan base-package="net.yash.backendShopping.daoImpl"/>
 
 <bean id="viewResolver"
 	  class="org.springframework.web.servlet.view.InternalResourceViewResolver">

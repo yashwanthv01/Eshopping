@@ -40,10 +40,6 @@
     <c:if test="${userClickHome == true }">
     <%@include file="home.jsp" %>
     </c:if>
-    <!-- user clicks on product tab -->
-    <c:if test="${userClickProduct == true }">
-    <%@include file="listproducts.jsp" %>
-    </c:if>
     <!-- user clicks on about tab -->
     <c:if test="${userClickAbout == true }">
     <%@include file="about.jsp" %>
@@ -51,6 +47,10 @@
     <!-- user clicks on contact tab -->
     <c:if test="${userClickContact == true }">
     <%@include file="contact.jsp" %>
+    </c:if>
+    <!-- User clicks on all products or a category of products -->
+    <c:if test="${userClickAllProducts == true or userClickCategoryProduct == true}">
+    <%@include file="listproducts.jsp" %>
     </c:if>
     </div>
     
